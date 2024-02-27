@@ -12,4 +12,7 @@ class Dual:
     def __sub__(self, other):
         return Dual(self.real - other.real, self.dual - other.dual)
     
+    def __mul__(self, other):
+        return Dual(self.real * other.real, self.real * other.dual + other.real * self.dual)
     
+
